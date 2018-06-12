@@ -1,0 +1,25 @@
+h1{
+    font-size: 60px;
+    background-color: maroon;
+
+
+}
+
+body{
+    background-color: gold;
+    font-family: "Copperplate Gothic Light", sans-serif;
+    font-size:20px;
+    text-align: center;
+
+}
+
+table{
+    margin:auto;
+}
+
+.btn{
+    border-radius: 10px 10px;
+    color: maroon;
+}
+
+

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Objects in a School</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="objects.js"></script>
+    <script src="data.js"></script>
+    <script src="actions.js"></script>
+    <link rel="stylesheet" type= "text/css" href="s.a-objects.css"/>
+
+</head>
+
+<h1>School Management</h1>
+<body onload="makeListSec(); makeListStud(); makeListTeach()">
+
+<h2 id="students">Students</h2>
+
+<table>
+    <tr>
+        <td>First Name:</td>
+        <td>Last Name:</td>
+        <td>Grade:</td>
+
+    </tr>
+    <tr>
+        <td><input title="Enter name" type="text" id="studentf" size="20"></td>
+        <td><input title="Enter name" type="text" id="studentl" size="20"></td>
+
+        <td><select title="Enter grade" id="studgrade">
+            <option value="0">Select Grade level</option>
+            <option value="1">Pre-K</option>
+            <option value="2">Kindergarten</option>
+            <option value="3">1st</option>
+            <option value="4">2nd</option>
+            <option value="5">3rd</option>
+            <option value="5">4th</option>
+            <option value="6">5th</option>
+            <option value="7">6th</option>
+            <option value="8">7th</option>
+            <option value="9">8th</option>
+            <option value="10">9th</option>
+            <option value="11">10th</option>
+            <option value="12">11th</option>
+            <option value="13">12th</option>
+        </select>
+        </td>
+    </tr>
+
+</table>
+<button class="btn btn-default" id="studentsbutton" onclick="addStudent()"> Add student</button>
+<div id="errorMessage1"></div>
+
+
+<h2 id="teachers">Teachers</h2>
+
+<table>
+    <tr>
+        <td>First Name:</td>
+        <td>Last Name:</td>
+        <td>Subject:</td>
+    </tr>
+
+      <tr>
+          <td><input title="Enter name" type="text" id="teachersf" size="20"></td>
+          <td><input title="Enter name" type="text" id="teachersl" size="20"></td>
+          <td><select title="Enter subject" id="teachsubj">
+              <option value="1">Select Subject</option>
+              <option value="2">Math</option>
+              <option value="3">English</option>
+              <option value="4">Science</option>
+              <option value="5">History</option>
+              <option value="6">Spanish</option>
+              <option value="7">French</option>
+              <option value="8">Physical Ed</option>
+          </select>
+          </td>
+
+      </tr>
+
+</table>
+<button class="btn btn-default" id="teachersbutton" onclick="addTeacher()"> Add teacher</button>
+
+<h2 id="subjects">Sections</h2>
+
+<table>
+    <tr>
+
+        <td>Name:</td>
+        <td>Max Size:</td>
+        <td>Teacher:</td>
+    </tr>
+
+ <tr>
+    <td><input title="Enter name" type="text" id="secname" size="20"></td>
+    <td><input title="Enter max number of students" type="text" id="secmax" size="20"></td>
+     <td><select title="Enter teacher" id="secteach"></select></td>
+
+
+</tr>
+
+</table>
+<button class="btn btn-default" id="sectionsbutton" onclick="addSection()"> Add section</button>
+
+
+<hr>
+<h2>List Items</h2>
+<select title="Select item" id="items">
+    <option value="0">Teachers</option>
+    <option value="1">Students</option>
+    <option value="2">Sections</option>
+</select>
+<button class="btn btn-default" id="listitemsbutton" onclick="listThings()">Show List</button>
+<div id="listItems"></div>
+<hr>
+
+<h2>Add Students and Teachers to Sections</h2>
+<select title="Select student" id="studentList">
+    <option value="0">Select Student</option>
+</select>
+<select title="Select subject" id="section1List">
+
+</select>
+<button class="btn btn-default" id="studentListbutton" onclick="addStudentToSection()">Add Student to section</button>
+<div id="errorMessage"></div>
+<br><br>
+<select title="Select teacher" id="teacherList">
+    <option value="0">Select Teacher</option>
+</select>
+<select title="Select subject" id="section2List">
+
+</select>
+<button class="btn btn-default" id="teachersListbutton" onclick="addTeacherToSection()">Add Teacher to section</button>
+<br><br>
+<hr>
+<h2>List Students in a Section</h2>
+<select title="Show student" id="section3List">
+
+</select>
+<button class="btn btn-default"id="listOfStudents" onclick="listStudentsInSecton()">Show list</button>
+<div id="listTable"></div>
+
+</body>
+</html>
